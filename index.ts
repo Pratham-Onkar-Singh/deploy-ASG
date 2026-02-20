@@ -8,7 +8,9 @@ app.get("/", (req, res) => {
 })
 
 app.get("/host", (req, res) => {
-  res.send(`Running on host with hostname: ${ os.hostname() }`)
+  const info = `Running on host with hostname: ${ os.hostname() }\nKernel Version: ${ os.arch() }\nOperating System: ${ os.version() }`
+  res.send()
+
 })
 
 app.get("/heavy-task", (req, res) => {
